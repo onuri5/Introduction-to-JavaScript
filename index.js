@@ -212,9 +212,11 @@ Using the miles function below do the following:
 3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-  /*add your code here*/
+function miles(kilometers){
+  return kilometers * 0.621371;
 }
+
+console.log(miles(100));
 
 
 
@@ -226,11 +228,12 @@ Using the feet function below do the following:
 3. Return number of feet
 */
 
-function feet(/*add your code here*/){
+function feet(centimeters){
   /*add your code here*/
+  return centimeters / 30.48;
 }
 
-
+console.log(feet(60))
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -265,8 +268,18 @@ Using the grade function below do the following:
  below should return 'you got an F'
 */
 
-function grade(/*Your Code here */){
-/*Your Code here */
+function grade(intialScore){
+  if(intialScore < 60) {
+    return "you got an F"
+  } else if (intialScore < 70) {
+    return "you got a D"
+  }else if (intialScore < 80) {
+    return "you got a C"
+  }else if (intialScore < 90) {
+    return "you got a B"
+  } else {
+    return "you got an A"
+  }
 }
 
 
@@ -284,11 +297,21 @@ HINT - try looking up the .includes() method
 */
 
 
-function vowelCounter(/*add your code here*/) {
-  /*add your code here*/
+function vowelCounter(string) {
+  let vowels = "aeiouAEIOU";
+  let vowelCount = 0;
+  for (let i = 0; i < vowels.length; i++) {
+    let vowel = vowels[i];
+    for (let j = 0; j < string.length; j++) {
+      if (vowel === string[j]) {
+        vowelCount += 1;
+      }
+    }
+  }
+  return vowelCount;
 }
 
-
+console.log(vowelCounter("HELLO WORLD"));
 
 /*🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑 Please do not modify anything below this line 🛑🛑🛑🛑🛑🛑🛑🛑🛑🛑*/
 function foo(){

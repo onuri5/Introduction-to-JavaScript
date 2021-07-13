@@ -60,7 +60,11 @@ Do the following:
    HINT: look up the Number method
 */
 
+function strConverter(str) {
+  return Number(str);
+}
 
+strConverter("1999")
 
 
 /*
@@ -88,9 +92,11 @@ Do the following:
  3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-  /*add your code here*/
+function dogYears(dogAge){
+  return dogAge * 7;
 }
+
+dogYears(10);
 
 
 
@@ -121,9 +127,29 @@ Puppies less than 1 year
 NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-  /*add your code here*/
-}
+function hungryDog(weight, age){
+
+    if (age < 1) {
+      if (age <= .33) {
+        return weight * .1;
+      } else if (age <= .582) {
+        return weight * .05;
+      } else {
+        return weight * .04;
+      }
+    } else {
+      if (weight <= 5) {
+        return weight * .05;
+      } else if (weight <= 10) {
+        return weight * .04;
+      } else if (weight <= 15) {
+        return weight * .03;
+      } else {
+        return weight * .02;
+      }
+    }
+  }
+hungryDog(15, 1)
 
 
 
